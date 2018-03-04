@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+<head>
+<style>
+html, body {  
+margin: 0px; 
+ width: 100%;   
+height: 100%;   
+background-image:url(valuationblur.jpg);
+font-family: "Helvetica Neue", Helvetica, sans-serif;   
+color: #444;   
+-webkit-font-smoothing: antialiased;
+}
+#lbar {
+  overflow: hidden;
+  background-color: #000000;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+#lbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 15px;
+}
+#hor {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+	max-height: 60px;
+	min-height: 60px;
+}
+
+#hor li {
+    float: left;
+}
+
+#hor li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	max-height: 60px;
+	min-height: 60px;
+	font-size: 19px;
+}
+
+#hor li a:hover {
+    background-color: #C0C0C0;
+	color: #000000;
+}
+
+
+#container {
+position: fixed;
+top: 40%;
+left: 0%;
+padding-bottom:1220px;
+margin-top: -134px;
+margin-left: 0px;
+background: #28342F;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+	color:#FFFFFF;
+}
+#container2 {
+position: fixed;
+top: 40%;
+left: 67%;
+padding-bottom:10px;
+
+margin-top: -124px;
+margin-left: -30px;
+background: #E7EAF7;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+	color:#000000;
+}
+
+form {
+    margin: 0 auto;
+    margin-top: 20px;
+}
+label {
+    color: #000000;
+    display: inline-block;
+    margin-left: 18px;
+    padding-top: 10px;
+    font-size: 14px;
+}
+input {
+    font-size: 14px;
+    outline: none;
+}
+input[type=text],
+input[type=password] {
+    color: #000000;
+    padding-left: 10px;
+    margin: 10px;
+    margin-top: 12px;
+    margin-left: 18px;
+    width: 290px;
+    height: 35px;
+}
+#lower {
+    background: #ecf2f5;
+    width: 100%;
+    height: 69px;
+    margin-top: 20px;
+}
+input[type=checkbox] {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.check {
+    margin-left: 3px;
+}
+input[type=submit] {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 80px;
+    height: 30px;
+}
+#a{
+font-family: "Helvetica Neue", Helvetica, sans-serif;
+text-align:center;
+}
+header{
+    padding: .02px;
+    color: white;
+    background-color: #8A8181;
+    clear: left;
+    text-align: left;
+	padding-left:25px;
+}
+#ver {
+    list-style-type: none;
+    margin: 0;
+	padding:0;
+    width: 300px;
+    background-color: #f1f1f1;
+}
+
+#ver li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+#ver li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#ver li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	float:right;
+}
+
+</style>
+</head>
+<body>
+<div id="hbar">
+<ul id="hor">
+  <li><a href="#home">Home</a></li>
+  
+  <li><a href="#contact">Contact</a></li>
+  <li style="float:right"><a href="#about">About</a></li>
+</ul>
+</div>
+<header><h4>Logged In as Manager</h4></header>
+
+<div id="container">
+<pre id="a">Services available to you  </pre>
+  <ul id="ver">
+    <li><a class="active" href="#">Request Asset Allocation</a></li>
+    <li><a href="#">View Status</a></li>
+	<li><a href="#">Logout</a></li>
+  </ul>
+</div>
+<div id="container2">       
+<form>
+<label for="heading" ><b>Asset Requisition Form</b></label></br></br>
+<label for="empno"><pre>Employee ID:  </pre></label>
+<input type="text" id="empno" name="empno" required></br>
+<label for="ename"><pre>Employee Name:</pre></label>
+<input type="text" id="ename" name="ename" required></br>
+  <label for="checkbox"><pre>Select assets to allocate </pre></label></br>
+<input type="checkbox" name="type" value="Smartphone"> Smartphone  &nbsp;
+<select>
+  <option value="Samsung">Samsung</option>
+  <option value="MI">MI</option>
+  <option value="Lenovo">Lenovo</option>
+</select></br>
+  <input type="checkbox" name="type" value="House" > House &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <select>
+  <option value="3BHK">3BHK</option>
+  <option value="2BHK">2BHK</option>
+  <option value="1BHK">1BHK</option>
+</select></br>
+  <input type="checkbox" name="type" value="Laptop" > Laptop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <select>
+  <option value="Lenovo">Lenovo</option>
+  <option value="HP">HP</option>
+  <option value="Dell">Dell</option>
+</select><br>
+<input type="button" class="button" value="Generate Asset Request ID"</input>
+</div>
+</div><!--/ lower-->
+</form>
+<div id="lbar">
+  <a style="float:left">For Admins and Managers only</a>
+  <a>Copyright: Batch-1 Group-2</a>
+</div>
+
+
+</div>
+</body>
+</html>
