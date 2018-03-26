@@ -25,7 +25,7 @@ insert into asset values( 108, 'House', '2BHK', 15, 'Available');
 insert into asset values( 109, 'House', '1BHK', 15, 'Available');
 
 
-create table employee(empno integer(6),ename varchar(10),job varchar(10),mgrno integer(5),hiredate date,deptid integer(10));
+create table employee(Empno integer(6),ename varchar(10),job varchar(10),mgrno integer(5),hiredate date,deptid integer(10));
 insert into employee values( 7839, 'KING', 'PRESIDENT', null, '1981-11-17',10);
 insert into employee values( 7698, 'BLAKE', 'MANAGER', 7839, '1981-5-1', 30);
 insert into employee values( 7782, 'CLARK', 'MANAGER', 7839,'1981-6-9',  10);
@@ -38,5 +38,8 @@ insert into Department values(10, 'ACCOUNTING');
 insert into Department values(20, 'RESEARCH');
 insert into Department values(30, 'SALES');
 insert into Department values(40, 'OPERATIONS');
+
+CREATE TABLE Request_ID (reqID int NOT NULL AUTO_INCREMENT PRIMARY KEY, Empno INTEGER References Employee(Empno), assetid integer(6), Status varchar(20));
+ALTER TABLE Request_ID AUTO_INCREMENT=1000;
 
 create table Asset_Allocation(AllocationId INTEGER, AssetId INTEGER, Empno INTEGER References Employee(Empno) , Allocation_date Date, Release_date Date);
